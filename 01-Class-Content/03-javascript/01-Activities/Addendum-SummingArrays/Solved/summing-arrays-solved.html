@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Summing Arrays</title>
+  </head>
+  <body>
+
+    <h1>Open the console to see the magic!</h1>
+
+    <script type="text/javascript">
+
+
+      // Creating two arrays with number values
+      var firstArray = [5, 4, 5, 7, 9];
+
+      var secondArray = [-1, 4, 3, 12, 7, -4, 2, 2, 0];
+
+      //Write two for-loops, one for each array, and sum the elements of each array
+      //Then, add the two results together and console log that result.
+      //HINT: you'll need to create a variable (or more) to store the sums.
+      var firstSum = 0;
+
+      for(var i = 0; i < firstArray.length; i++) {
+        firstSum = firstSum + firstArray[i];
+      }
+
+      var secondSum = 0;
+
+      for(var i = 0; i < secondArray.length; i++) {
+        secondSum = secondSum + secondArray[i];
+      }
+
+      var result = firstSum + secondSum;
+
+      console.log('first result', result);
+
+      //Now, let's turn the above repetition into a function
+      //Wite a function that takes in an array as argument, loops through it, and returns the sum
+      //Use that function to sum the two above arrays and console log the result.
+      function arraySum(arr){
+        console.log('arguments', arguments);
+        var sum = 0;
+
+        for(var i = 0; i < arr.length; i++) {
+          sum = sum + arr[i];
+        }
+
+        return sum;
+      }
+
+      result = arraySum( firstArray, secondSum ) + arraySum( secondArray );
+
+      console.log('second result', result);
+
+
+      //BONUS: if you're finished early, write a function that takes a number as the argument (n) and returns an array with length n, and is filled with random values
+      //HINT: you'll need to use Math.floor and Math.random to generate your random numbers, similar to the RPS game
+
+      // function randomArray(n) {
+      //   var randArr = [];
+
+      //   for(var i = 0; i < n; i++) {
+      //     randArr.push( Math.floor(Math.random() * 10) );
+      //   }
+
+      //   return randArr;
+      // }
+
+      // console.log( randomArray(5) );
+
+
+    </script>
+
+  </body>
+</html>
